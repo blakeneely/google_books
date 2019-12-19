@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image: url("./images/reading.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px; 
+    width: 100%;
+    padding-top: 0px;
+}
+.navbar {
+    background-color: transparent;
+}
