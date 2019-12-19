@@ -19,7 +19,11 @@ function Jumbotron({ children }) {
                 </ul>
             </div>
         </nav>
-                {children}
+            <div className="text-center jumbotron-text text-light">
+                <h1>(REACT) Google Books Search</h1>
+                <h3>Search for and save your favorite books</h3>
+            </div>
+            {children}
         </div>
     );
 }
