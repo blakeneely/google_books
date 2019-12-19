@@ -4,16 +4,16 @@ import { Row, Col } from "../Grid"
 
 const SearchResult = props => {
     return (props.books.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
+        <div className="card resultsContainer text-center">
+            <div className="card-body">
                 <div className="article">
-                    <h3>Search Results</h3>
+                    <h3>No results yet, search for a title first</h3>
                 </div>
             </div>
         </div>
     ) : (
-            <div className="card">
-                <div className="card-body player">
+            <div className="card resultsContainer">
+                <div className="card-body">
                     <div className="article">
                         <h3>Search Results</h3>
                         {props.books.map(book => {
@@ -26,7 +26,21 @@ const SearchResult = props => {
                                         <Col size="1" className="emptyCol" />
                                         <Col size="9" className="bookInfo">
                                             <Row>
-                                                <h3 className="bookTitle">{book.title}</h3>
+                                                <Col size="9" className="bookTitle">
+                                                    <h3>{book.title}</h3>
+                                                </Col>
+                                                <Col size="3">
+                                                <div className="buttonDiv">
+                                                    <button className="saveBook btn btn-outline-primary" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
+                                                        Save
+                                                    </button>
+                                                    <a href={book.link} target="_blank" rel="noopener noreferrer">
+                                                        <button className="viewBook btn btn-outline-info">
+                                                            View
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                </Col>
                                             </Row>
                                             <Row>
                                                 <h4 className="bookAuthor">{book.author}</h4>
@@ -37,16 +51,6 @@ const SearchResult = props => {
                                         </Col>
                                     </Row>
                                     <br></br>
-                                    <Row className="buttonDiv ">
-                                        <button className="saveBook btn btn-primary" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
-                                            Save Book
-                                        </button>
-                                        <a href={book.link} target="_blank">
-                                            <button className="viewBook btn btn-success">
-                                                View Book
-                                        </button>
-                                        </a>
-                                    </Row>
                                 </li>
                             );
                         })}

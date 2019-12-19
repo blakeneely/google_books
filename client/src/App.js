@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import SearchBooks from "./pages/SearchBooks";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Jumbotron from "./components/Jumbotron";
 
 function App() {
   return (

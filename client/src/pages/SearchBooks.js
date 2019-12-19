@@ -84,8 +84,6 @@ class SearchBooks extends Component {
           </div>
         )
     }
-
-
 }
 
 export default SearchBooks
