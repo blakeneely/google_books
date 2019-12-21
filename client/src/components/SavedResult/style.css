@@ -1,0 +1,15 @@
+.resultsContainer {
+    border: none;
+}
+.resultsContainerTitle {
+    margin-bottom: 15px;
+}
+.bookTitle {
+    padding-left: 0;
+}
+button {
+    margin: 5px;
+}
+.search-list {
+    padding: 20px;
+}

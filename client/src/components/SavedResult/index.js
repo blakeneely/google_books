@@ -4,18 +4,18 @@ import {Row, Col} from "../Grid"
 
 const SavedResult = props => {
     return (props.savedBooks.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
+        <div className="card resultsContainer">
+            <div className="card-body">
                 <div className="article">
                     <h3>Saved books</h3>
                 </div>
             </div>
         </div>
     ):(
-        <div className="card">
-            <div className="card-body player">
+        <div className="card resultsContainer">
+            <div className="card-body">
                 <div className="article">
-                    <h3>Books that You Saved</h3>
+                    <h3 className="resultsContainerTitle">Books that You Saved</h3>
                     {props.savedBooks.map(savedbook => {
                         return (
                             <li className="saved-list list-group-item">
@@ -29,21 +29,23 @@ const SavedResult = props => {
                                     <Col size="9" className="bookInfo">
                                         <Row>
                                             <Col size="9">
-                                                <h2 className="bookTitle">{savedbook.title}</h2>
+                                                <h3 className="bookTitle">{savedbook.title}</h3>
                                             </Col>
                                             <Col size="3">
-                                            <button className="deleteBook btn btn-outline-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
-                                                Delete
-                                            </button>
-                                            <a href={savedbook.link} target="_blank">
-                                                <button className="viewBook btn btn-outline-success">
-                                                    View
-                                                </button>
-                                            </a>
+                                                <div className="buttonDiv">
+                                                    <button className="deleteBook btn btn-outline-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
+                                                        Delete
+                                                    </button>
+                                                    <a href={savedbook.link} target="_blank">
+                                                        <button className="viewBook btn btn-outline-success">
+                                                            View
+                                                        </button>
+                                                    </a>
+                                                </div>
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <h3 className="bookAuthor">{savedbook.authors}</h3>
+                                            <h4 className="bookAuthor">{savedbook.authors}</h4>
                                         </Row>
                                         <Row>
                                             <p className="bookDescription">{savedbook.description}</p>
@@ -51,8 +53,6 @@ const SavedResult = props => {
                                     </Col>
                                 </Row>
                                 <br></br>
-                                <Row className="buttonDiv ">
-                                </Row>
                             </li>
                         );
                     })}
