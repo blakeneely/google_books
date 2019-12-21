@@ -46,7 +46,7 @@ class SearchBooks extends Component {
                         }
                         return result;
                     })
-                    // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
+                    // reset the state of the empty books array to the new arrays of objects with properties getting back from the response
                     this.setState({ books: results, error: "" })
                 }
             })

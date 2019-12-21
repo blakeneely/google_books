@@ -28,7 +28,19 @@ const SavedResult = props => {
                                     {/* col-9 show information of the book */}
                                     <Col size="9" className="bookInfo">
                                         <Row>
-                                            <h2 className="bookTitle">{savedbook.title}</h2>
+                                            <Col size="9">
+                                                <h2 className="bookTitle">{savedbook.title}</h2>
+                                            </Col>
+                                            <Col size="3">
+                                            <button className="deleteBook btn btn-outline-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
+                                                Delete
+                                            </button>
+                                            <a href={savedbook.link} target="_blank">
+                                                <button className="viewBook btn btn-outline-success">
+                                                    View
+                                                </button>
+                                            </a>
+                                            </Col>
                                         </Row>
                                         <Row>
                                             <h3 className="bookAuthor">{savedbook.authors}</h3>
@@ -40,14 +52,6 @@ const SavedResult = props => {
                                 </Row>
                                 <br></br>
                                 <Row className="buttonDiv ">
-                                    <button className="deleteBook btn btn-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
-                                        Delete Book
-                                    </button>
-                                    <a href={savedbook.link} target="_blank">
-                                        <button className="viewBook btn btn-success">
-                                            View Book
-                                        </button>
-                                    </a>
                                 </Row>
                             </li>
                         );
