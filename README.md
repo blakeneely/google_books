@@ -3,6 +3,9 @@
 ## Description
 A full stack app built with React and React-router, Google Book Search is a great app to store any books you love from Google Books! Just search for any book you want, if you find it's something you want to buy just click the view button to launch Google Books. If you love it and want to save it to your collection just click the save.
 
+## Live Demo
+Check out a <a href="https://immense-depths-52318.herokuapp.com/">live demo here</a> hosted on heroku.
+
 ## Built with
 - HTML, CSS and Javascript
 - Bootstrap
