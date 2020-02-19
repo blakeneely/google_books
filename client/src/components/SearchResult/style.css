@@ -10,3 +10,15 @@ button {
 .search-list {
     padding: 20px;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bookImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: red;
+    margin-left: auto;
+}

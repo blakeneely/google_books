@@ -20,16 +20,16 @@ const SearchResult = props => {
                             return (
                                 <li className="search-list list-group-item">
                                     <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
-                                        <Col size="2" className="bookImage">
+                                        <Col size="md-2">
                                             <img src={book.image} alt={book.title} />
                                         </Col>
-                                        <Col size="1" className="emptyCol" />
-                                        <Col size="9" className="bookInfo">
+                                        <Col size="sm-1" className="emptyCol" />
+                                        <Col size="lg-8" className="bookInfo">
                                             <Row>
-                                                <Col size="9" className="bookTitle">
+                                                <Col size="xs-9" className="bookTitle">
                                                     <h3>{book.title}</h3>
                                                 </Col>
-                                                <Col size="3">
+                                                <Col size="xs-3">
                                                 <div className="buttonDiv">
                                                     <button className="saveBook btn btn-outline-primary" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
                                                         Save
