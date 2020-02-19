@@ -20,9 +20,9 @@ const SearchResult = props => {
                             return (
                                 <li className="search-list list-group-item">
                                     <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
-                                        <Col size="md-2">
+                                        <div className="col-md-2 bookImage">
                                             <img src={book.image} alt={book.title} />
-                                        </Col>
+                                        </div>
                                         <Col size="sm-1" className="emptyCol" />
                                         <Col size="lg-8" className="bookInfo">
                                             <Row>
