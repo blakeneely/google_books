@@ -21,17 +21,17 @@ const SavedResult = props => {
                             <li className="saved-list list-group-item">
                                 <Row className="SearchResult" id={savedbook.title + "Card"} key={savedbook._id}>
                                     {/* col-3 show image of the book */}
-                                    <Col size="2" className="bookImage">
+                                    <Col size="md-2" className="bookImage">
                                         <img src={savedbook.image} alt={savedbook.title} />
                                     </Col>
-                                    <Col size="1" className="emptyCol"/>
+                                    <Col size="sm-1" className="emptyCol"/>
                                     {/* col-9 show information of the book */}
-                                    <Col size="9" className="bookInfo">
+                                    <Col size="lg-8" className="bookInfo">
                                         <Row>
-                                            <Col size="9">
+                                            <Col size="xs-9">
                                                 <h3 className="bookTitle">{savedbook.title}</h3>
                                             </Col>
-                                            <Col size="3">
+                                            <Col size="xs-3">
                                                 <div className="buttonDiv">
                                                     <button className="deleteBook btn btn-outline-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
                                                         Delete
